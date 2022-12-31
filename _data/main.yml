@@ -1,9 +1,9 @@
 # Image, name, profession in the sidebar
 
 image: /assets/images/author-image.jpg
-name: John Doe
-profession: A Web Developer
-email: john@doe.com # The contact form submissions will be received in this email address.
+name: Ruiqi Li
+profession: A future business analyst
+email: R342li@uwaterloo.ca # The contact form submissions will be received in this email address.
 
 #   ,-----.       ,--.                   ,---.  ,--.
 #  '  .--./ ,---. |  | ,---. ,--.--.    '   .-' |  ,---.  ,---. ,--,--,--. ,---.
@@ -21,9 +21,7 @@ color-scheme: green
 
 
 # Set this to false in production
-color-scheme-changer-widget: true
-
-
+color-scheme-changer-widget: false
 
 
 # Menu items in the sidebar
@@ -32,7 +30,7 @@ menu:
   - title: Projects
     link: /projects/
 
-  - title: Blog
+  - title: Experience
     link: /blog/
 
   - title: Contact
@@ -43,52 +41,52 @@ menu:
 # Social icons in the sidebar
 # use font awesome icon code in the 'icon:' value
 social:
-  facebook:
-       icon: fa-facebook-square
-       link: https://facebook.com
+  Medium:
+       icon: fa-medium
+       link: https://medium.com/@gongkenaihuan
 
-  twitter:
-      icon: fa-twitter
-      link: https://twitter.com
+  Instagram:
+      icon: fa-square-instagram
+      link: https://www.instagram.com/richardhooyah/
 
   linkedin:
       icon: fa-linkedin
-      link: https://linkedin.com
+      link: https://www.linkedin.com/in/-ruiqili/
 
   github:
       icon: fa-github
-      link: https://github.com
+      link: https://github.com/R342li
 
 
 
 expertise:
-  - title: HTML5
-    level: 45
+  - title: Souring
+    level: 70
     color: rgb(247, 205, 182)
 
-  - title: CSS3
-    level: 65
+  - title: R studio
+    level: 60
     color: rgb(113, 178, 222)
 
-  - title: jQuery
-    level: 50
+  - title: Excel
+    level: 90
     color: rgb(80, 185, 185)
 
-  - title: PHP
-    level: 40
+  - title: MySQL
+    level: 60
     color: rgb(124, 142, 222)
 
-  - title: WordPress
+  - title: Power BI
     level: 75
     color: rgb(160, 158, 158)
 
-  - title: SEO
-    level: 90
+  - title: Tableau
+    level: 80
     color: rgb(112, 195, 148)
 
-  - title: Photoshop
+  - title: Lightroom
     level: 70
     color: rgb(230, 133, 172)
 
 
-buy-button: true
+buy-button: false
