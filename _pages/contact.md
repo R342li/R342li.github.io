@@ -6,7 +6,7 @@ description: I care about my readers' opinions. Please leave a note or just say 
 ---
 
 ### Write to me
-I care about my readers' opinions. Please leave a note or just say hello.
+At present, I am continuing to improve my data analysis ability. If you have any suggestions or know related job opportunities, please do not hesitate to contact me
 
 
 <form action="https://formspree.io/{{site.data.main.email}}" method="POST">
@@ -29,7 +29,5 @@ I care about my readers' opinions. Please leave a note or just say hello.
 
 
 {% highlight html %}
-
-This form starts working once you update your email in configuration. Delete this line in the contact page found in the path _pages/contact.md
 
 {% endhighlight %}
