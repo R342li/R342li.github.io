@@ -41,11 +41,11 @@ menu:
 # Social icons in the sidebar
 # use font awesome icon code in the 'icon:' value
 social:
-  Medium:
+  medium:
        icon: fa-medium
        link: https://medium.com/@gongkenaihuan
 
-  Instagram:
+  instagram:
       icon: fa-square-instagram
       link: https://www.instagram.com/richardhooyah/
 
