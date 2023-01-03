@@ -1,6 +1,6 @@
 ---
 title: PwC Data Analytics Virtual Case Experience
-image:(https://user-images.githubusercontent.com/120835197/209664733-d4eae8a2-f152-4e88-b136-9f66cb90dc30.png)
+image:/assets/images/PwC-Switzerland-and-ImmuniWeb-are-teaming-up.jpg
 description: The virtual case is about an inquiry from a big telecom company that needs to know the customer trend. The participant must create a dashboard in Power BI for the client that reflects all relevant Key Performance Indicators (KPIs) and metrics in the dataset.
 company:  PwC Switzerland
 date: 2022-12-21
