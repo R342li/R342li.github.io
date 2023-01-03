@@ -9,7 +9,7 @@ description: I care about my readers' opinions. Please leave a note or just say 
 At present, I am continuing to improve my data analysis ability. If you have any suggestions or know related job opportunities, please do not hesitate to contact me
 
 
-<form action="https://formspree.io/{{site.data.main.email}}" method="POST">
+<form action="https://formspree.io/f/mwkjkvye" method="POST">
   <div class="form-group">
     <label for="email">Email address</label>
     <input type="email" name="email" class="form-control" placeholder="Enter email">
