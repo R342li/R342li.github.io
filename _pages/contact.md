@@ -15,7 +15,7 @@ At present, I am continuing to improve my data analysis ability. If you have any
     <input type="email" name="email" class="form-control" placeholder="Enter email">
   </div>
   <div class="form-group">
-    <label for="message">Example textarea</label>
+    <label for="message"> Any comments</label>
     <textarea class="form-control" name="content" id="" rows="3" placeholder="Enter your message"></textarea>
   </div>
   <input type="hidden" name="_next" value="{{site.url}}{{page.url}}">
