@@ -6,7 +6,7 @@ description: I care about my readers' opinions. Please leave a note or just say 
 ---
 
 ### Write to me
-At present, I am continuing to improve my data analysis ability. If you have any suggestions or know related job opportunities, please do not hesitate to contact me
+At present, I am continuing to improve my data analysis ability. If you have any suggestions or know related job opportunities, please do not hesitate to contact me.
 
 
 <form action="https://formspree.io/f/mwkjkvye" method="POST">
