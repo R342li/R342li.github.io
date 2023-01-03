@@ -30,7 +30,7 @@ menu:
   - title: Projects
     link: /projects/
 
-  - title: Experience
+  - title: Blog
     link: /blog/
 
   - title: Contact
@@ -89,4 +89,7 @@ expertise:
     color: rgb(230, 133, 172)
 
 
-buy-button: false
+    
+
+
+
