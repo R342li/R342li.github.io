@@ -1,5 +1,5 @@
 ---
-title: 
+title: Critical Analysis of the Hybrid Work Mode & Its Related Disconnecting Rights
 image: /assets/images/samuel-zeller-103112.jpg
 author: Ruiqi Li
 categories:
