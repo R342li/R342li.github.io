@@ -1,6 +1,6 @@
 ---
 title: Cyclistic Bike Share Analysis — Google Data analytics
-image: /assets/images/samuel-zeller-72120-unsplash.jpg
+image: /assets/images/photo-1573804633927-bfcbcd909acd.jpg
 description: This case study is a capstone project of the Google Data Analytics course offered by Coursera. 
 company: Google
 date: 2022-12-05
