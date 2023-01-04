@@ -1,6 +1,6 @@
 ---
 title: Utilize SQL to Provide Business Insight -Danny’s Diner
-image: /assets/images/etienne-girardet-360034-unsplash.jpg
+image: /assets/images/laptop.jpg
 description: Analysis of specific business cases using SQL, A Weekly SQL Challange
 company: 8 Week SQL Challenge
 date:  2022-12-19
