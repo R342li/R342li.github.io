@@ -2,10 +2,7 @@
 title: Multinational Enterprises and Its Related Corporate Social Responsibility 
 image: /assets/images/CSR.jpg
 author: Ruiqi Li
-categories:
-    - HR Management 
-    - CSR
-    - Multinational enterprises  
+  
 layout: post
 ---
 
