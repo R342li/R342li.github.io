@@ -64,7 +64,7 @@ disqus:
 
 # Define whether recent posts should be shown at the bottom of each post.
 # Change it to `no` to remove recent posts.
-recent-posts: no
+recent-posts: yes
 
 
 
