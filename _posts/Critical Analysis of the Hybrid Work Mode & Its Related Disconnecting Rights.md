@@ -2,7 +2,8 @@
 title: Critical Analysis of the Hybrid Work Mode & Its Related Disconnecting Rights
 image: /assets/images/WORK FROM HOME.jpg
 author: Ruiqi Li
-
+categories:
+  - projects
 layout: post
 ---
 
