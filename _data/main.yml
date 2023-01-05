@@ -31,7 +31,7 @@ menu:
     link: /projects/
 
   - title: Blog
-    link: /blog/
+    link: /_posts/
 
   - title: Contact
     link: /contact/
