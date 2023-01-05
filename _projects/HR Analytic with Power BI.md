@@ -1,6 +1,6 @@
 ---
 title: HR Analytic with Power BI
-image: R342li.github.io/assets/images/hr analytics.png
+image: /assets/images/hr analytics.png
 description: Analysis of Employee information with Data Visualization
 Company: Power BI
 date: 2022-12-03
