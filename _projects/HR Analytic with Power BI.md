@@ -2,7 +2,7 @@
 title: HR Analytic with Power BI
 image: /assets/images/hr analytics.png
 description: Analysis of Employee information with Data Visualization
-Company: Power BI
+company: Power BI
 date: 2022-12-03
 layout: post
 ---
