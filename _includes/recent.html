@@ -5,13 +5,13 @@
   <div class="recent-grid">
     {% for post in site.related_posts limit: 4 %}
     <div class="items" data-aos="fade-up">
-      <a class="nostyle item" href="{{'{{projects.url | relative_url}}">
+      <a class="nostyle item" href="{{'{{post.url | relative_url}}">
         <div class="cards">
           <div
             class="image rounded"
-            style="background-image: url({{'{{projects.image | relative_url}})"
+            style="background-image: url({{'{{post.image | relative_url}})"
           ></div>
-          <p class="title"><small>{{projects.title}}</small></p>
+          <p class="title"><small>{{post.title}}</small></p>
         </div>
       </a>
     </div>
