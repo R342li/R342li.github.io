@@ -11,7 +11,7 @@ The goal of this project is to derive actionable insights to convert casual ride
 
 ![image](https://user-images.githubusercontent.com/120835197/210659212-41a3be90-aa17-4d1c-9997-75afb6666840.png "Photo by Maarten van den Heuvel on Unsplash")
 
-## Background
+### Background
 A successful bike-share programme operated by Cyclistic was introduced in 2016 with a fleet of 5,824 bicycles that are tracked and secured into a system of 692 stations throughout Chicago. The bikes may at any time be released from one station and brought back to any other station in the network. Members are those who have an annual membership, whilst casual users are those who just utilise single rides or full-day passes. The marketing director wants to increase the number of annual subscriptions because they are more profitable than day or single-ride passes.
 
 The marketing team will create a new marketing plan to turn occasional riders into yearly subscribers. My primary responsibility on the team as a junior data analyst is to deliver engaging data insights and expert data visualisations. The key data analysis steps are as followed: **Ask**, **Prepare

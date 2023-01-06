@@ -44,7 +44,7 @@ The data now looks well-organized However, the headers do not make any sense. Mo
 
 After uploading the second file with a similar process, the dataset has been created and is ready for further analysis.
 
-#### Data Analysis
+### Data Analysis
 Generating insights requires more than just generating PivotTables or PivotCharts from existing data. In this case, critical data needs to be analyzed across multiple data categories, and for different ranges. DAX is a collection of functions, operators, and constants that can be used in a formula or expression to calculate and return one or more values that will be used in this phrase. Some of the measures are created and will be shown below.
 _Basic information calculation (COUNTROWS, CALCULATE, DIVIDE)_
 ```
