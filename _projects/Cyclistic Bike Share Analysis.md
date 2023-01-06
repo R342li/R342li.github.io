@@ -57,7 +57,7 @@ str(tripdata)
 # Statistical summary of data
 summary(tripdata) 
 ```
-![image](https://user-images.githubusercontent.com/120835197/210659965-ab20d2a6-c696-4f4e-a4d6-e59b19ee7fe7.png "Effect of summary() function & str() function")
+![image](https://user-images.githubusercontent.com/120835197/210659965-ab20d2a6-c696-4f4e-a4d6-e59b19ee7fe7.png "Effect of summary() function & str() function")</p>
 Do some cleaning and processing for the data
 ```
 # Remove NA value

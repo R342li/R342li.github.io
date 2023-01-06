@@ -21,7 +21,7 @@ All datasets exist within the dannys_diner the [database schema](https://8weeksq
 
 ## Data Analysis
 Due to the already-built database schema, the data can be directly processed for analysis after review with the ROCCC Principle and all the queries are written with the MySQL server.
-### 1. The total amount each customer spent
+###  The total amount each customer spent
 I use the JOIN()function to join the two tables first and use the SUM() to sum up all the purchases to calculate the money spent.
 ```
 SELECT s.customer_id, SUM (m.price) AS customer_spent
@@ -30,7 +30,7 @@ JOIN menu m
 ON s.product_id=m.product_id
 GROUP BY s.customer_id;
 ```
-### 2. Count the days of each customer visit
+###  Count the days of each customer visit
 To be aware that Customers can make several purchases per day, the function COUNT() and DISTINCT ()need to be used simultaneously.
 ```
 SELECT customer_id,
@@ -39,7 +39,7 @@ FROM Sales
 GROUP BY customer_id;
 ```
 ![image Alt Text](https://user-images.githubusercontent.com/120835197/210644216-d0df13bd-0095-4aef-b04b-502798ddba1e.png "Count the days of each customer visit") 
-### 3. The first item be purchased by each customer on their first visit
+###  The first item be purchased by each customer on their first visit
 The nested SELECT() is used here (a query within a query). In the sales and menu tables, Main SELECT () is used to select the distinct customer id and product names. Following that, I added the condition where the order date is the minimum order date with the second SELECT().
 ```
 SELECT DISTINCT(customer_id), product_name FROM sales s
@@ -52,7 +52,7 @@ WHERE s.order_date = ANY (
 );
 ```
 ![image](https://user-images.githubusercontent.com/120835197/210646389-2dab1ccd-43cd-4a18-9e1a-66d658dda976.png "The first item be purchased")
-### 4. Most popular food & Purchased time
+###  Most popular food & Purchased time
 I use JOIN () to join the two tables to generate the output, then, with some sorting functions such as DESC and LIMIT to get extreme value.
 ```
 SELECT COUNT(product_name) AS most_popular_product, product_name FROM sales s
@@ -63,7 +63,7 @@ ORDER BY most_popular_product DESC
 LIMIT 1;
 ```
 ![image](https://user-images.githubusercontent.com/120835197/210646566-57c0192a-aeaf-4cf8-a263-869e7e01ee3f.png "Most popular food & Purchased time")
-### 5. Each customer’s favourite food
+###  Each customer’s favourite food
 The query gets a little bit complex here; I first developed a common table expression that ranked customers according to the number of products they had purchased; then, I selected the customer id, the product name, and the count from the expression, limiting the rank to 1.
 _To be aware, Function DENSE_RANK () only applied to MySQL v8.0 or above._
 ```
@@ -82,7 +82,7 @@ FROM cte_ranking
 WHERE cte_ranking = 1;
 ```
 ![image](https://user-images.githubusercontent.com/120835197/210646796-ad785d52-1ae2-4e30-abd0-cba273368382.png "Each customer’s favourite food")
-### 6. The first item customer purchased after they become a member
+###  The first item customer purchased after they become a member
 First, a ranking table will be created to rank customers by order date and filter the result to get the first line that the order date is equal to or beyond the membership date.
 ```
 WITH ordered_became_member AS
@@ -109,7 +109,7 @@ FROM ordered_became_member
 WHERE rank = 1;
 ```
 ![image](https://user-images.githubusercontent.com/120835197/210647211-63d6a747-2bed-4ae3-96af-8a5f1cdfd222.png "The first item customer purchased after they become a member")
-### 7. The last item customer purchased before becoming the member
+###  The last item customer purchased before becoming the member
 Only one query needs to be changed compared to question 6, which is letting order data before the membership date.
 ```
 WITH ordered_before_member AS
@@ -136,7 +136,7 @@ FROM ordered_before_member
 WHERE rank = 1;
 ```
 ![image](https://user-images.githubusercontent.com/120835197/210647823-f242c902-100e-4355-9a3f-7d29240ff419.png "The last item customer purchased before becoming the member")
-### 8. The total number of items and amount of money spent before becoming a member
+###  The total number of items and amount of money spent before becoming a member
 Multiple functions JOIN() are adapted by joining three tables together and selecting the order date before joining the membership.
 ```
 SELECT s.customer_id,
@@ -151,7 +151,7 @@ WHERE s.order_date < mem.join_date
 GROUP BY s.customer_id;
 ```
 ![image](https://user-images.githubusercontent.com/120835197/210647986-c1d59a4e-b661-4a33-a513-edfd0b28d0f8.png "The total number of purchasing & amount of money spent")
-### 9. If the membership plan is 1 dollar spent equals 10 points and order sushi has a 2x points multiplier, how many points would each customer earn?
+###  If the membership plan is 1 dollar spent equals 10 points and order sushi has a 2x points multiplier, how many points would each customer earn?
 A specific scenario is given here with multiple conditions. Therefore, a CASE() function can be used here; the CASE () function can apply the above conditions in a new column. Then, points are cumulative using the SUM() and displayed after a JOIN() function.
 ```
 SELECT 
@@ -169,7 +169,7 @@ ON s.product_id  = m.product_id
 GROUP BY s.customer_id;
 ```
 ![image](https://user-images.githubusercontent.com/120835197/210648160-b8b4d59f-0b2f-47fb-9516-8d7f4c9cb415.png "Points customer earned")
-### 10. Scenario: In the first week after a customer joins the program (including their join date), they earn 2x points on all items, not just sushi — how many points do customers A and B have at the end of January?
+###  Scenario: In the first week after a customer joins the program (including their join date), they earn 2x points on all items, not just sushi — how many points do customers A and B have at the end of January?
 First, a common table expression is created to show the order placed and how many days after becoming a member for the first week, then a CASE()function is used to calculate the points corresponding to the above conditions; after that, the EXTRACT function is used to get the first month (January).
 ```
 SELECT customer_id, SUM(total_points)
