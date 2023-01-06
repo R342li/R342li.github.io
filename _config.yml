@@ -49,7 +49,7 @@ analytics:
 
 # Table of contents in each post
 # Change the value to 'no' if Table of Contents is not required.
-toc:  no
+toc: yes
 
 # Share buttons
 # Change it to `no` to remove share buttons.
