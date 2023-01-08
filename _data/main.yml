@@ -1,18 +1,11 @@
-# Image, name, profession in the sidebar
+
 
 image: /assets/images/profile photo.jpg
 name: Ruiqi Li
 profession: A future business analyst
-email: R342li@uwaterloo.ca # The contact form submissions will be received in this email address.
+email: R342li@uwaterloo.ca 
 
-#   ,-----.       ,--.                   ,---.  ,--.
-#  '  .--./ ,---. |  | ,---. ,--.--.    '   .-' |  ,---.  ,---. ,--,--,--. ,---.
-#  |  |    | .-. ||  || .-. ||  .--'    `.  `-. |  .-.  || .-. :|        || .-. :
-#  '  '--'\' '-' '|  |' '-' '|  |       .-'    ||  | |  |\   --.|  |  |  |\   --.
-#   `-----' `---' `--' `---' `--'       `-----' `--' `--' `----'`--`--`--' `----'
-#
-# There are 5 color schemes to choose from.
-# The one at the bottom takes precedence.
+
 color-scheme: orange
 color-scheme: pink
 color-scheme: purple
@@ -20,12 +13,11 @@ color-scheme: blue
 color-scheme: green
 
 
-# Set this to false in production
+
 color-scheme-changer-widget: false
 
 
-# Menu items in the sidebar
-# Use a maximum of 3 items
+
 menu:
   - title: Projects
     link: /projects/
@@ -38,8 +30,7 @@ menu:
 
 
 
-# Social icons in the sidebar
-# use font awesome icon code in the 'icon:' value
+
 social:
   medium:
        icon: fa-medium
