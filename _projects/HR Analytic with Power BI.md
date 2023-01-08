@@ -116,7 +116,7 @@ Data with decision. (n.d.). _Data with decision_. YouTube. https://www.youtube.c
 
 Vulpen, E. van. (2021). _What is HR analytics?_ AIHR. from https://www.aihr.com/blog/what-is-hr-analytics/
 
-Minewiskan. (n.d.). _Dax Function Reference_ — Dax. DAX | Microsoft Learn. https://learn.microsoft.com/en-us/dax/dax-function-reference
+Minewiskan. (n.d.). _Dax Function Reference_ https://learn.microsoft.com/en-us/dax/dax-function-reference
 
 
 
