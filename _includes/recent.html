@@ -3,7 +3,7 @@
     <h3>Recent Projects</h3>
   </div>
   <div class="recent-grid">
-    {% for post in site.related_projects limit: 4 %}
+    {% for post in site.projects limit: 4 %}
     <div class="items" data-aos="fade-up">
       <a class="nostyle item" href="{{'{{post.url | relative_url}}">
         <div class="cards">
