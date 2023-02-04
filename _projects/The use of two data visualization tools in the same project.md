@@ -227,6 +227,7 @@ The first step is similar, connecting the database to the application, or more a
 ![image](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*o4eIsCcPG5TBZXh6bWI3OQ.png 'Connect the CSV file to the Power Query editor')
 
 The first thing is using the first row as a header when the database is uploaded.
+
 ```
  #"Promoted Headers" 
 = Table.PromoteHeaders(#"Changed Type", [PromoteAllScalars=true])
@@ -245,9 +246,10 @@ Also, the text values can not be directly replaced by icons using the IF() funct
 = Table.AddColumn(#"Renamed Columns1", "Currency_Ranking", each if [Currency_of_Date] = "Current" then 3 else if [Currency_of_Date] = "Stale" then 2 else if [Currency_of_Date] = "Out of date" then 1 else 0),
  #"Changed Type1" 
 = Table.TransformColumnTypes(#"Added Conditional Column2",{{"Escalation_Ranking", Int64.Type}, {"Priority_Ranking", Int64.Type}, {"Currency_Ranking", Int64.Type}, {"Modified", type text}}),
- #"Added Conditional Column3" 
+#"Added Conditional Column3" 
 = Table.AddColumn(#"Changed Type1", "RAG_Ranking", each if [RAG] = "GREEN" then 3 else if [RAG] = "AMBER" then 2 else if [RAG] = "RED" then 1 else 0),)
 ```
+
 ![image](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*MKx13NFyY5XwM5G2Is1r3g.png)
 
 When I attempt to change its type to Date/Time, I get the following data format. Error, it couldn’t parse the input provided as a DateTime value. The error is occurring due to the system's default setting; the data format should be rearranged.
