@@ -339,6 +339,7 @@ Most of the records are not escalated to SLT, and the team should be awareness o
 
 ## Conclusion
 ![image](https://miro.medium.com/v2/resize:fit:828/0*Z2lhkKWEFLstCvkk)
+
 Tableau and Power BI are powerful data visualization and business intelligence tools that can create interactive dashboards, charts, and reports from various data sources. Both platforms offer a drag-and-drop interface for creating visualizations and a wide range of pre-built visualizations and charts. They both offer the ability to connect to various data sources, including Excel, SQL Server, and cloud-based data sources.
 
 However, there are also some key differences between the two. Tableau has more advanced mapping capabilities, which allows for more detailed spatial analysis. Power BI does have mapping capabilities, but it is less advanced. Tableau offers more flexible and advanced analytics, such as forecasting, clustering, and statistical models. Power BI, on the other hand, primarily focuses on providing business intelligence, more advanced calculation ability, and data visualization capabilities for Microsoft products, such as Excel and SQL Server.
