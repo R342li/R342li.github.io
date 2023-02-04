@@ -229,14 +229,14 @@ The first step is similar, connecting the database to the application, or more a
 The first thing is using the first row as a header when the database is uploaded.
 
 ```
- #"Promoted Headers" 
+#"Promoted Headers" 
 = Table.PromoteHeaders(#"Changed Type", [PromoteAllScalars=true])
 ```
 Also, the text values can not be directly replaced by icons using the IF() function in tableau. Therefore, conditional columns must be added to transfer string value to integer value.
 ```
 #"Added Conditional Column" 
 = Table.AddColumn(#"Promoted Headers", "Custom", each if [Priority] = "Critical" then 4 else if [Priority] = "High" then 3 else if [Priority] = "Normal" then 2 else 1),
- #"Renamed Columns" 
+#"Renamed Columns" 
 = Table.RenameColumns(#"Added Conditional Column",{{"Custom", "Priority_Ranking"}})
 #"Added Conditional Column1" 
 = Table.AddColumn(#"Renamed Columns", "Custom", each if [Escalation_to_SLT] = "Yes" then 3 else if [Escalation_to_SLT] = "No" then 2 else 1),
