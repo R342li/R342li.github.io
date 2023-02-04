@@ -1,9 +1,9 @@
 ---
 title: The use of two data visualization tools in the same project
 image: /assets/images/power-bi-vs-tableau.jpg
-description: Creation of a BI dashboard to show the status of projects, services, events, and activities during the start of the new academic year.
+description: Creation of BI dashboards to show the status of projects, services, events, and activities during the start of the new academic year.
 company: University of Edinburgh 
-date:  2022-01-15
+date:  2023-01-15
 layout: post
 ---
 
