@@ -244,32 +244,32 @@ When I attempt to change its type to Date/Time, I get the following data format.
 ```M Language
 #"Duplicated Column" 
 = Table.DuplicateColumn(#"Added Conditional Column3", "Modified", "Modified - Copy"),
-    #"Split Column by Position" 
+#"Split Column by Position" 
 = Table.SplitColumn(#"Duplicated Column", "Modified", Splitter.SplitTextByRepeatedLengths(11), {"Modified.1", "Modified.2"}),
-    #"Changed Type2" 
-= Table.TransformColumnTypes(#"Split Column by Position",{{"Modified.1", type text}, {"Modified.2", type time}}),
-    #"Split Column by Delimiter" = Table.SplitColumn(#"Changed Type2", "Modified.1", Splitter.SplitTextByDelimiter("/", QuoteStyle.Csv), {"Modified.1.1", "Modified.1.2", "Modified.1.3"}),
-    #"Changed Type3" 
-= Table.TransformColumnTypes(#"Split Column by Delimiter",{{"Modified.1.1", Int64.Type}, {"Modified.1.2", Int64.Type}, {"Modified.1.3", Int64.Type}}),
-    #"Reordered Columns" 
-= Table.ReorderColumns(#"Changed Type3",{"Category", "Project_Service_Title", "Directorate", "Responsibility", "RAG", "RAG_Comment", "Service_Owner", "Escalation_to_SLT", "Modified.1.3", "Modified.1.2", "Modified.1.1", "Modified.2", "Risk_TO_SoT", "Priority", "Currency_of_Date", "Priority_Ranking", "Escalation_Ranking", "Currency_Ranking", "RAG_Ranking"}),
-    #"Inserted Merged Column" 
+#"Changed Type2" 
+=Table.TransformColumnTypes(#"Split Column by Position",{{"Modified.1", type text}, {"Modified.2", type time}}),
+#"Split Column by Delimiter" = Table.SplitColumn(#"Changed Type2", "Modified.1", Splitter.SplitTextByDelimiter("/", QuoteStyle.Csv), {"Modified.1.1", "Modified.1.2", "Modified.1.3"}),
+#"Changed Type3" 
+=Table.TransformColumnTypes(#"Split Column by Delimiter",{{"Modified.1.1", Int64.Type}, {"Modified.1.2", Int64.Type}, {"Modified.1.3", Int64.Type}}),
+#"Reordered Columns" 
+=Table.ReorderColumns(#"Changed Type3",{"Category", "Project_Service_Title", "Directorate", "Responsibility", "RAG", "RAG_Comment", "Service_Owner", "Escalation_to_SLT", "Modified.1.3", "Modified.1.2", "Modified.1.1", "Modified.2", "Risk_TO_SoT", "Priority", "Currency_of_Date", "Priority_Ranking", "Escalation_Ranking", "Currency_Ranking", "RAG_Ranking"}),
+#"Inserted Merged Column" 
 = Table.AddColumn(#"Reordered Columns", "Merged", each Text.Combine({Text.From([Modified.1.3], "zh-CN"), Text.From([Modified.1.2], "zh-CN"), Text.From([Modified.1.1], "zh-CN")}, "-"), type text),
-    #"Changed Type4" 
+#"Changed Type4" 
 = Table.TransformColumnTypes(#"Inserted Merged Column",{{"Merged", type date}}),
-    #"Renamed Columns3" 
+#"Renamed Columns3" 
 = Table.RenameColumns(#"Changed Type4",{{"Modified.2", "Time"}}),
-    #"Removed Columns" 
+#"Removed Columns" 
 = Table.RemoveColumns(#"Renamed Columns3",{"Modified.1.1", "Modified.1.2", "Modified.1.3"}),
-    #"Renamed Columns4" 
+#"Renamed Columns4" 
 = Table.RenameColumns(#"Removed Columns",{{"Merged", "Date"}}),
-    #"Inserted Merged Column1" 
+#"Inserted Merged Column1" 
 = Table.AddColumn(#"Renamed Columns4", "Merged", each Text.Combine({Text.From([Date], "zh-CN"), Text.From([Time], "zh-CN")}, " "), type text),
-    #"Renamed Columns2" 
+#"Renamed Columns2" 
 = Table.RenameColumns(#"Inserted Merged Column1",{{"Merged", "Modified"}}),
-    #"Removed Columns1" 
+#"Removed Columns1" 
 = Table.RemoveColumns(#"Renamed Columns2",{"Modified"}),
-    #"Renamed Columns5" 
+#"Renamed Columns5" 
 = Table.RenameColumns(#"Removed Columns1",{{"Modified - Copy", "Modified"}}
 ```
 
