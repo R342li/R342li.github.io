@@ -234,22 +234,6 @@ The first thing is using the first row as a header when the database is uploaded
 ```
 Also, the text values can not be directly replaced by icons using the IF() function in tableau. Therefore, conditional columns must be added to transfer string value to integer value.
 
-```
-#"Added Conditional Column" 
-= Table.AddColumn(#"Promoted Headers", "Custom", each if [Priority] = "Critical" then 4 else if [Priority] = "High" then 3 else if [Priority] = "Normal" then 2 else 1),
-#"Renamed Columns" 
-= Table.RenameColumns(#"Added Conditional Column",{{"Custom", "Priority_Ranking"}})
-#"Added Conditional Column1" 
-= Table.AddColumn(#"Renamed Columns", "Custom", each if [Escalation_to_SLT] = "Yes" then 3 else if [Escalation_to_SLT] = "No" then 2 else 1),
- #"Renamed Columns1" 
-= Table.RenameColumns(#"Added Conditional Column1",{{"Custom", "Escalation_Ranking"}}),
- #"Added Conditional Column2" 
-= Table.AddColumn(#"Renamed Columns1", "Currency_Ranking", each if [Currency_of_Date] = "Current" then 3 else if [Currency_of_Date] = "Stale" then 2 else if [Currency_of_Date] = "Out of date" then 1 else 0),
- #"Changed Type1" 
-= Table.TransformColumnTypes(#"Added Conditional Column2",{{"Escalation_Ranking", Int64.Type}, {"Priority_Ranking", Int64.Type}, {"Currency_Ranking", Int64.Type}, {"Modified", type text}}),
-#"Added Conditional Column3" 
-= Table.AddColumn(#"Changed Type1", "RAG_Ranking", each if [RAG] = "GREEN" then 3 else if [RAG] = "AMBER" then 2 else if [RAG] = "RED" then 1 else 0),)
-```
 
 ![image](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*MKx13NFyY5XwM5G2Is1r3g.png)
 
