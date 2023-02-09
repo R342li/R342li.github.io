@@ -1,4 +1,4 @@
----
+----
 title: The use of two data visualization tools in the same project
 image: /assets/images/power-bi-vs-tableau.jpg
 description: Creation of BI dashboards to show the status of projects, services, events, and activities during the start of the new academic year.
@@ -56,6 +56,7 @@ Responsibility3 AS Responsibility,
 ID 
 FROM
  tracker;
+ ```
 CREATE VIEW tracker_others AS SELECT
 ID,
 Category,
@@ -71,6 +72,7 @@ Priority,
 Currency_of_Date 
 FROM
  tracker;
+```
 CREATE VIEW trakcer_others_responsibility AS SELECT
 Responsibility,
 tracker_others.ID,
@@ -139,6 +141,7 @@ Currency_of_Date
 FROM
  tracker_others
  LEFT JOIN responsibility3 ON responsibility3.ID = tracker_others.ID;
+```
 CREATE TABLE new_table AS SELECT
 * 
 FROM
