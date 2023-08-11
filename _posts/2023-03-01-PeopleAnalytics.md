@@ -1,6 +1,6 @@
 ---
 title: Agoda's People Analytics Journey with Greenhouse
-image: /assets/images/diversity-square.webp
+image: /assets/images/HybridWorkforce01.jpg
 author: Ruiqi Li
 categories:
   - human resources management
